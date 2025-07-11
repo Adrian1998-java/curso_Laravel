@@ -1,0 +1,24 @@
+body
+{
+    background-color: rgb(116, 116, 104);
+}
+h1
+{
+    text-align: center;
+    border-bottom: 4mm ridge;
+    border-color: black;
+    background-color: beige;
+}
+.contenedor
+{
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+    padding: 20px;
+    border: 4mm double;
+    border-color: black;
+}
+.card
+{
+    margin: 5px;
+}
