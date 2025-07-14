@@ -13,11 +13,11 @@
         @forelse($facturas as $f)
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">{{ $f['numero'] }}</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">{{ $f['cliente'] }}</h6>
-                <p class="card-text">Importe de {{ $f['importe'] }} €</p>
+                <h5 class="card-title">{{ $f->numero }}</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">{{ $f->cliente }}</h6>
+                <p class="card-text">Importe de {{ $f->importe }} €</p>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{ $f['fecha'] }}</li>
+                    <li class="list-group-item">{{ $f->fecha }}</li>
                 </ul>
                 <!-- <a href="#" class="card-link">Card link</a>
                 <a href="#" class="card-link">Another link</a> -->
