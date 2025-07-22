@@ -8,7 +8,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Http\Request;
 use Illuminate\Cache\RateLimiting\Limit;
 
-class RouteServiceProvider extends ServiceProvider
+class BookServiceProvider extends ServiceProvider
 {
     public const HOME = '/home';
 
@@ -21,7 +21,7 @@ class RouteServiceProvider extends ServiceProvider
             Route::prefix('api')
             ->group(base_path('routes/api.php'));
     
-            Route::group(base_path('routes/web.php'));
+            // Route::group(base_path('routes/web.php'));
         });
     }
     protected function configureRateLimiting()
@@ -34,5 +34,3 @@ class RouteServiceProvider extends ServiceProvider
         });
     }
 }
-
-
