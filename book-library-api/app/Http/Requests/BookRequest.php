@@ -22,13 +22,9 @@ class BookRequest extends FormRequest
     public function rules(): array
     {
         return [
-            // $table->string('titulo');
-            // $table->string('autor');
-            // $table->date('ano_publicacion');
-            // $table->string('isbn');
             'título' => 'required|string',
             'autor' => 'required|string',
-            'ano_publicacion' => 'required|date',
+            'ano_publicacion' => 'required|string',
             'isbn' => 'required|string'
         ];
     }

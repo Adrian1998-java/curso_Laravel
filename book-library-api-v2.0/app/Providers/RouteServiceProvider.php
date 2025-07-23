@@ -8,7 +8,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Http\Request;
 use Illuminate\Cache\RateLimiting\Limit;
 
-class BookServiceProvider extends ServiceProvider
+class RouteServiceProvider extends ServiceProvider
 {
     public const HOME = '/home';
 
@@ -37,3 +37,4 @@ class BookServiceProvider extends ServiceProvider
         });
     }
 }
+
