@@ -13,23 +13,6 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        Producto::create([
-            'name'=>'Example',
-            'short_description'=>'Lorem ipsum',
-            'description'=>' Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis placeat nam reprehenderit facere fugiat sint incidunt possimus minima magnam, est rerum debitis, accusamus quam libero a harum, ipsum eveniet cupiditate?',
-            'price'=>25
-        ]);
-        Producto::create([
-            'name'=>'Example 2',
-            'short_description'=>'Lorem ipsum',
-            'description'=>' Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis placeat nam reprehenderit facere fugiat sint incidunt possimus minima magnam, est rerum debitis, accusamus quam libero a harum, ipsum eveniet cupiditate?',
-            'price'=>35
-        ]);
-        Producto::create([
-            'name'=>'Example 3',
-            'short_description'=>'Lorem ipsum',
-            'description'=>' Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis placeat nam reprehenderit facere fugiat sint incidunt possimus minima magnam, est rerum debitis, accusamus quam libero a harum, ipsum eveniet cupiditate?',
-            'price'=>50
-        ]);
+        Producto::factory()->count(50)->create();
     }
 }
