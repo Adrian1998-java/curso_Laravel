@@ -5,9 +5,12 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Phone;
+use App\Models\Role;
 
 class User extends Authenticatable
 {
@@ -51,5 +54,10 @@ class User extends Authenticatable
     public function phone() : HasMany
     {
         return $this->hasMany(Phone::class);
+    }
+
+    public function roles() : BelongsToMany
+    {
+        return $this->belongsToMany(Role::class)->withPivot('added_by');
     }
 }

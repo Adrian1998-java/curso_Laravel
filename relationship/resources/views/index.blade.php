@@ -7,9 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
     @foreach($user as $u)
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-2" style="max-width: 540px;">
         <div class="row g-0">
             <div class="col-md-4">
                 <div class="card-header">
@@ -20,7 +19,7 @@
                     <p> {{$u->email}} </p>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-4">
                 <div class="card-header">
                     Teléfonos del usuario: 
                 </div>
@@ -32,9 +31,20 @@
                     </ul>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card-header">
+                    Roles del usuario: 
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        @foreach($u->roles ?? [] as $r)
+                            <li class="list-group-item">{{$r->name}}, added by : {{ $r->pivot->added_by }}</li>    
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     @endforeach
-    </div>
 </body>
 </html>

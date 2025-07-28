@@ -12,17 +12,16 @@ class RouteServiceProvider extends ServiceProvider
 {
     public const HOME = '/home';
 
-    public function boot()
+    public function boot(): void
     {
-
-        $this->configureRateLimiting();
-    
-        $this->routes(function(){
-            Route::prefix('api')
+        // Rutas Api
+        Route::middleware('api')
+            ->prefix('api')
             ->group(base_path('routes/api.php'));
-    
-            Require base_path('routes/web.php');
-        });
+
+        // Rutas Web
+        Route::middleware('web')
+            ->group(base_path('routes/web.php'));
     }
     protected function configureRateLimiting()
     {
