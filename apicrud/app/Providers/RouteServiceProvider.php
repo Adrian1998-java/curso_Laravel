@@ -21,7 +21,8 @@ class RouteServiceProvider extends ServiceProvider
             Route::prefix('api')
             ->group(base_path('routes/api.php'));
     
-            Require base_path('routes/web.php');
+            require base_path('routes/web.php');
+
         });
     }
     protected function configureRateLimiting()

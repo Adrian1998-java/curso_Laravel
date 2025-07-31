@@ -62,7 +62,7 @@ class NoteController extends Controller
         return view('note.show', compact('note'));
     }
     
-    public function destroy (Request $request, Note $note) : RedirectResponse
+    public function destroy (Request $request, Note $actividad) : RedirectResponse
     {
         $note->delete();
         return redirect()->route('note.index')->with('danger','Note deleted');     
